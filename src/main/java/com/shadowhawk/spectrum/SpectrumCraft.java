@@ -3,6 +3,8 @@ package com.shadowhawk.spectrum;
 import org.apache.logging.log4j.Logger;
 
 import com.shadowhawk.spectrum.proxy.CommonProxy;
+import com.shadowhawk.spectrum.registry.ModBlocks;
+import com.shadowhawk.spectrum.registry.ModItems;
 
 import mcp.MethodsReturnNonnullByDefault;
 import net.minecraft.creativetab.CreativeTabs;
@@ -24,7 +26,7 @@ public class SpectrumCraft {
 	            VERSION = "";
 
 	    /** Custom Creative Tab */
-	    public static final CreativeTabs playtab = new CreativeTabs("playtab") {
+	    public static final CreativeTabs modtab = new CreativeTabs("modtab") {
 	        @Override
 	        @MethodsReturnNonnullByDefault
 	        public ItemStack getTabIconItem() {
@@ -48,7 +50,8 @@ public class SpectrumCraft {
 	        config.load();
 	        config.save();
 
-	        //TODO preInit() blocks and items here?
+	        ModItems.preInit();
+	        ModBlocks.preInit();
 
 	        proxy.preInit(event);
 	    }
