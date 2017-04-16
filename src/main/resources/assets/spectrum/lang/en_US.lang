@@ -4,3 +4,4 @@ itemGroup.modtab=SpectrumCraft
 item.spectrium_dust.name=Spectrium Dust
 #Blocks
 tile.spectrium_block.name=Spectrium Block
+tile.spectrium_ore.name=Spectrium Ore

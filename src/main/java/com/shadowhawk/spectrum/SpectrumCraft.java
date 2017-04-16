@@ -5,6 +5,7 @@ import org.apache.logging.log4j.Logger;
 import com.shadowhawk.spectrum.proxy.CommonProxy;
 import com.shadowhawk.spectrum.registry.ModBlocks;
 import com.shadowhawk.spectrum.registry.ModItems;
+import com.shadowhawk.spectrum.world.ModWorldGen;
 
 import mcp.MethodsReturnNonnullByDefault;
 import net.minecraft.creativetab.CreativeTabs;
@@ -14,11 +15,12 @@ import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.common.SidedProxy;
 import net.minecraftforge.fml.common.event.FMLInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
+import net.minecraftforge.fml.common.registry.GameRegistry;
 
 @Mod(modid = SpectrumCraft.MODID, name = SpectrumCraft.MODNAME, version = SpectrumCraft.VERSION)
 public class SpectrumCraft {
 	
-
+		public static boolean allowSpectriumGen = false;
 	    public static final String
 	            MODID = "spectrum",
 	            MODNAME = "Spectrum Craft",
@@ -47,12 +49,16 @@ public class SpectrumCraft {
 	        Configuration config = new Configuration(event.getSuggestedConfigurationFile());
 
 	        config.load();
+	        
+	        allowSpectriumGen = config.getBoolean("allowSpectriumGen", Configuration.CATEGORY_GENERAL, true, "Generates Spectrium Ore");
+	        
 	        config.save();
 
 	        ModItems.preInit();
 	        ModBlocks.preInit();
 
 	        proxy.preInit(event);
+	        GameRegistry.registerWorldGenerator(new ModWorldGen(allowSpectriumGen), 0);
 	    }
 
 
