@@ -1,2 +1,2 @@
 # SpectrumCraft
-Initial setup of repository for ModOff
+A mod that adds a little more color to the world
