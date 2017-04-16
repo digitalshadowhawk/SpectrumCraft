@@ -1,0 +1,6 @@
+{
+	"parent": "block/cube_all",
+	"textures": {
+		"all": "spectrum:blocks/iced_spectrium_block"
+	}
+}

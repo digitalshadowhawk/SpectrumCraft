@@ -1,0 +1,5 @@
+{
+    "variants": {
+        "normal": { "model": "spectrum:iced_spectrium_block" }
+    }
+}

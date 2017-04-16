@@ -21,6 +21,9 @@ import net.minecraftforge.fml.common.registry.GameRegistry;
 public class SpectrumCraft {
 	
 		public static boolean allowSpectriumGen = false;
+		public static boolean allowFrostedThaw = true;
+		public static boolean allowIcedThaw = true;
+		public static boolean allowFrozenThaw = true;
 	    public static final String
 	            MODID = "spectrum",
 	            MODNAME = "Spectrum Craft",
@@ -51,6 +54,9 @@ public class SpectrumCraft {
 	        config.load();
 	        
 	        allowSpectriumGen = config.getBoolean("allowSpectriumGen", Configuration.CATEGORY_GENERAL, true, "Generates Spectrium Ore");
+	        allowFrostedThaw = config.getBoolean("allowFrostedThaw", Configuration.CATEGORY_GENERAL, true, "Frosted Spectrium Blocks thaw into Spectrium Blocks");
+	        allowIcedThaw = config.getBoolean("allowIcedThaw", Configuration.CATEGORY_GENERAL, true, "Iced Spectrium Blocks thaw into Frosted Spectrium Blocks");
+	        allowFrozenThaw = config.getBoolean("allowFrozenThaw", Configuration.CATEGORY_GENERAL, true, "Frozen Spectrium Blocks thaw into Iced Spectrium Blocks");
 	        
 	        config.save();
 

@@ -2,6 +2,21 @@
 itemGroup.modtab=SpectrumCraft
 #Items
 item.spectrium_dust.name=Spectrium Dust
+item.spectrium_helmet.name=Spectrium Helmet
+item.spectrium_Chestplate.name=Spectrium Chestplate
+item.spectrium_leggings.name=Spectrium Leggings
+item.spectrium_boots.name=Spectrium Boots
+item.spectrium_sword.name=Spectrium Sword
+item.spectrium_axe.name=Spectrium Axe
+item.spectrium_pickaxe.name=Spectrium Pickaxe
+item.spectrium_shovel.name=Spectrium Shovel
+item.spectrium_hoe.name=Spectrium Hoe
+item.rainbow_potion.name=Rainbow Potion
 #Blocks
 tile.spectrium_block.name=Spectrium Block
 tile.spectrium_ore.name=Spectrium Ore
+tile.frosted_spectrium_block.name=Frosted Spectrium Block
+tile.iced_spectrium_block.name=Iced Spectrium Block
+tile.frozen_spectrium_block.name=Frozen Spectrium Block
+tile.spectrium_torch.name=Spectrium Torch
+tile.spectrium_dust.name=Spectrium Dust
