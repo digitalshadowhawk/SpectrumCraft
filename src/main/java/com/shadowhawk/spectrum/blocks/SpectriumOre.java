@@ -22,7 +22,7 @@ public class SpectriumOre extends BaseBlock{
 	  
 	@Nullable
 	public Item getItemDropped(IBlockState state, Random rand, int fortune) {
-		return ModItems.spectriumdust;
+		return ModItems.spectriumDust;
 	}
 
 	public int quantityDropped(Random random) {
@@ -31,11 +31,11 @@ public class SpectriumOre extends BaseBlock{
 	
 	public ItemStack getItem(World worldIn, BlockPos pos, IBlockState state)
     {
-        return new ItemStack(ModBlocks.spectriumBlock);
+        return new ItemStack(ModBlocks.spectriumOre);
     }
 
     protected ItemStack createStackedBlock(IBlockState state)
     {
-        return new ItemStack(ModBlocks.spectriumBlock);
+        return new ItemStack(ModBlocks.spectriumOre);
     }
 }

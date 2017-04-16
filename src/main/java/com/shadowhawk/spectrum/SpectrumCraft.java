@@ -29,7 +29,7 @@ public class SpectrumCraft {
 	        @Override
 	        @MethodsReturnNonnullByDefault
 	        public ItemStack getTabIconItem() {
-	            return new ItemStack(ModItems.spectriumdust);
+	            return new ItemStack(ModItems.spectriumDust);
 	        }
 	    };
 

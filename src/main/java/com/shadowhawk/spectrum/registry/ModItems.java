@@ -10,20 +10,20 @@ import net.minecraft.util.ResourceLocation;
 import net.minecraftforge.fml.common.registry.GameRegistry;
 
 public class ModItems {
-	public static Item spectriumdust;
+	public static Item spectriumDust;
 
     public static void preInit(){
-    	spectriumdust = new ItemSpectriumDust("spectrium_dust");
+    	spectriumDust = new ItemSpectriumDust("spectrium_dust");
 
         registerItems();
     }
 
     public static void registerItems() {
-        GameRegistry.register(spectriumdust, new ResourceLocation(SpectrumCraft.MODID, "spectrium_dust"));
+        GameRegistry.register(spectriumDust, new ResourceLocation(SpectrumCraft.MODID, "spectrium_dust"));
     }
 
     public static void registerRenders() {
-        registerRender(spectriumdust);
+        registerRender(spectriumDust);
     }
 
     private static void registerRender(Item item) {
