@@ -8,7 +8,6 @@ import com.shadowhawk.spectrum.registry.ModItems;
 
 import mcp.MethodsReturnNonnullByDefault;
 import net.minecraft.creativetab.CreativeTabs;
-import net.minecraft.init.Items;
 import net.minecraft.item.ItemStack;
 import net.minecraftforge.common.config.Configuration;
 import net.minecraftforge.fml.common.Mod;
@@ -30,7 +29,7 @@ public class SpectrumCraft {
 	        @Override
 	        @MethodsReturnNonnullByDefault
 	        public ItemStack getTabIconItem() {
-	            return new ItemStack(Items.DIAMOND);
+	            return new ItemStack(ModItems.spectriumdust);
 	        }
 	    };
 

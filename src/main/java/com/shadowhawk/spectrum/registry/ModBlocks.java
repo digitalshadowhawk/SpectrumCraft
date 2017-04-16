@@ -2,6 +2,7 @@ package com.shadowhawk.spectrum.registry;
 
 import com.shadowhawk.spectrum.SpectrumCraft;
 import com.shadowhawk.spectrum.blocks.SpectriumBlock;
+import com.shadowhawk.spectrum.blocks.SpectriumOre;
 
 import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
@@ -15,15 +16,18 @@ import net.minecraftforge.fml.common.registry.GameRegistry;
 public class ModBlocks {
 
     public static SpectriumBlock spectriumBlock;
+    public static SpectriumOre spectriumOre;
 
     public static void preInit(){
     	spectriumBlock = new SpectriumBlock(Material.ROCK, "spectrium_block");
+    	spectriumOre = new SpectriumOre(Material.ROCK, "spectrium_ore");
 
         registerBlocks();
     }
 
     public static void registerBlocks() {
         registerBlock(spectriumBlock, "spectrium_block");
+        registerBlock(spectriumOre, "spectrium_ore");
     }
 
     public static void registerBlock(Block block, String name) {
@@ -33,12 +37,12 @@ public class ModBlocks {
 
     public static void registerRenders() {
         registerRender(spectriumBlock);
+        registerRender(spectriumOre);
     }
 
     private static void registerRender(Block block) {
         Item item = Item.getItemFromBlock(block);
-        //Minecraft.getMinecraft().getRenderItem().getItemModelMesher().register(item, 0, new ModelResourceLocation(SpectrumCraft.MODID + ":" + item.getUnlocalizedName().substring(5), "inventory"));
-		Minecraft.getMinecraft().getRenderItem().getItemModelMesher().register(item, 0, new ModelResourceLocation(item.getRegistryName(), "inventory"));
+        Minecraft.getMinecraft().getRenderItem().getItemModelMesher().register(item, 0, new ModelResourceLocation(item.getRegistryName(), "inventory"));
 	}
 
 }

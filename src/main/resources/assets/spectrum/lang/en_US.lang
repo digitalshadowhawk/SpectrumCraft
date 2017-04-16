@@ -1,0 +1,6 @@
+#GUI
+itemGroup.modtab=SpectrumCraft
+#Items
+item.spectrium_dust.name=Spectrium Dust
+#Blocks
+tile.spectrium_block.name=Spectrium Block
