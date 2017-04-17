@@ -6,6 +6,7 @@ import com.shadowhawk.spectrum.blocks.FrozenSpectriumBlock;
 import com.shadowhawk.spectrum.blocks.IcedSpectriumBlock;
 import com.shadowhawk.spectrum.blocks.SpectriumBlock;
 import com.shadowhawk.spectrum.blocks.SpectriumOre;
+import com.shadowhawk.spectrum.blocks.SpectriumTorch;
 
 import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
@@ -23,13 +24,15 @@ public class ModBlocks {
     public static FrostedSpectriumBlock frostedSpectriumBlock;
     public static IcedSpectriumBlock icedSpectriumBlock;
     public static FrozenSpectriumBlock frozenSpectriumBlock;
+    public static SpectriumTorch spectriumTorch;
 
     public static void preInit(){
     	spectriumBlock = new SpectriumBlock(Material.ROCK, "spectrium_block");
     	spectriumOre = new SpectriumOre(Material.ROCK, "spectrium_ore");
-    	frostedSpectriumBlock = new FrostedSpectriumBlock(Material.ICE, "frosted_spectrium_block");
+    	frostedSpectriumBlock = new FrostedSpectriumBlock(Material.PACKED_ICE, "frosted_spectrium_block");
     	icedSpectriumBlock = new IcedSpectriumBlock(Material.PACKED_ICE, "iced_spectrium_block");
     	frozenSpectriumBlock = new FrozenSpectriumBlock(Material.PACKED_ICE, "frozen_spectrium_block");
+    	spectriumTorch = new SpectriumTorch(Material.CIRCUITS, "spectrium_torch");
 
         registerBlocks();
     }
@@ -40,6 +43,7 @@ public class ModBlocks {
         registerBlock(frostedSpectriumBlock, "frosted_spectrium_block");
         registerBlock(icedSpectriumBlock, "iced_spectrium_block");
         registerBlock(frozenSpectriumBlock, "frozen_spectrium_block");
+        registerBlock(spectriumTorch, "spectrium_torch");
     }
 
     public static void registerBlock(Block block, String name) {
@@ -53,6 +57,7 @@ public class ModBlocks {
         registerRender(frostedSpectriumBlock);
         registerRender(icedSpectriumBlock);
         registerRender(frozenSpectriumBlock);
+        registerRender(spectriumTorch);
     }
 
     private static void registerRender(Block block) {

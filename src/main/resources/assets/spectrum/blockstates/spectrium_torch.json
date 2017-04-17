@@ -1,0 +1,9 @@
+{
+    "variants": {
+        "facing=up": { "model": "spectrum:spectrium_torch" },
+        "facing=east": { "model": "spectrum:spectrium_torch_wall" },
+        "facing=south": { "model": "spectrum:spectrium_torch_wall", "y": 90 },
+        "facing=west": { "model": "spectrum:spectrium_torch_wall", "y": 180 },
+        "facing=north": { "model": "spectrum:spectrium_torch_wall", "y": 270 }
+    }
+}

@@ -1,5 +1,6 @@
 package com.shadowhawk.spectrum.proxy;
 
+import net.minecraft.world.World;
 import net.minecraftforge.fml.common.event.FMLInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPostInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
@@ -15,4 +16,5 @@ public class CommonProxy {
     public void postInit(FMLPostInitializationEvent e) {
     }
 
+    public void generateRainbowFlames(World worldIn, double xCoord, double yCoord, double zCoord, double xSpeed, double ySpeed, double zSpeed) { }
 }
