@@ -22,8 +22,8 @@ public class ModRecipes {
 	private static void addSmelting() {
 		GameRegistry.addSmelting(ModBlocks.spectriumOre, new ItemStack(ModItems.spectriumDust, 2),  5.0F);
 		GameRegistry.addSmelting(ModBlocks.frostedSpectriumBlock, new ItemStack(ModBlocks.spectriumBlock, 1),  0.0F);
-		GameRegistry.addSmelting(ModBlocks.icedSpectriumBlock, new ItemStack(ModBlocks.frostedSpectriumBlock, 1),  0.0F);
-		GameRegistry.addSmelting(ModBlocks.frozenSpectriumBlock, new ItemStack(ModBlocks.icedSpectriumBlock, 1),  0.0F);
+		GameRegistry.addSmelting(ModBlocks.icedSpectriumBlock, new ItemStack(ModBlocks.spectriumBlock, 1),  0.0F);
+		GameRegistry.addSmelting(ModBlocks.frozenSpectriumBlock, new ItemStack(ModBlocks.spectriumBlock, 1),  0.0F);
 	}
 
 	private static void addShapelessRecipes() {
