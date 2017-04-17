@@ -33,7 +33,6 @@ public class ModWorldGen implements IWorldGenerator {
             int y = minHeight + rand.nextInt(heightDiff);
             int z = chunk_Z * 16 + rand.nextInt(16);
             generator.generate(world, rand, new BlockPos(x,y,z));
-            String debug = world.getBlockState(new BlockPos(x, y, z)).getBlock().getUnlocalizedName();
         }
     }
 

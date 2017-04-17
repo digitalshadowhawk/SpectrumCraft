@@ -227,9 +227,6 @@ public class SpectriumTorch extends BaseBlock{
         double d0 = (double)pos.getX() + 0.5D;
         double d1 = (double)pos.getY() + 0.7D;
         double d2 = (double)pos.getZ() + 0.5D;
-        double d3 = 0.22D;
-        double d4 = 0.27D;
-
         if (enumfacing.getAxis().isHorizontal())
         {
         	EnumFacing enumfacing1 = enumfacing.getOpposite();

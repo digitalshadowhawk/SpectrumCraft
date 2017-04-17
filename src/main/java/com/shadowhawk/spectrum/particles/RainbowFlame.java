@@ -2,14 +2,9 @@ package com.shadowhawk.spectrum.particles;
 
 import java.util.Random;
 
-import com.shadowhawk.spectrum.SpectrumCraft;
-import com.shadowhawk.spectrum.blocks.SpectriumTorch;
-
 import net.minecraft.client.particle.ParticleFlame;
 import net.minecraft.client.renderer.VertexBuffer;
-import net.minecraft.client.renderer.texture.TextureAtlasSprite;
 import net.minecraft.entity.Entity;
-import net.minecraft.util.ResourceLocation;
 import net.minecraft.world.World;
 
 public class RainbowFlame extends ParticleFlame{

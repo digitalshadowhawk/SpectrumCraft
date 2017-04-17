@@ -18,6 +18,7 @@ public class SpectriumOre extends BaseBlock{
 	  
 	public SpectriumOre(Material material, String name) {
         super(material, name);
+        
     }
 	  
 	@Nullable
@@ -31,6 +32,7 @@ public class SpectriumOre extends BaseBlock{
 	
 	public ItemStack getItem(World worldIn, BlockPos pos, IBlockState state)
     {
+		this.dropXpOnBlockBreak(worldIn, pos, 5);
         return new ItemStack(ModBlocks.spectriumOre);
     }
 

@@ -9,7 +9,6 @@ import com.shadowhawk.spectrum.registry.ModBlocks;
 
 import net.minecraft.block.material.Material;
 import net.minecraft.block.state.IBlockState;
-import net.minecraft.init.Blocks;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraft.util.math.BlockPos;
@@ -40,7 +39,8 @@ public class FrostedSpectriumBlock extends BaseBlock {
         return new ItemStack(ModBlocks.frostedSpectriumBlock);
     }
     
-    public void updateTick(World worldIn, BlockPos pos, IBlockState state, Random rand)
+    @SuppressWarnings("deprecation")
+	public void updateTick(World worldIn, BlockPos pos, IBlockState state, Random rand)
     {
         if ((worldIn.getLightFor(EnumSkyBlock.BLOCK, pos) > 11 - this.getDefaultState().getLightOpacity()) && SpectrumCraft.allowFrostedThaw)
         {

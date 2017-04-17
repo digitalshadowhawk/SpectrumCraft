@@ -39,7 +39,8 @@ public class IcedSpectriumBlock extends BaseBlock {
         return new ItemStack(ModBlocks.icedSpectriumBlock);
     }
     
-    public void updateTick(World worldIn, BlockPos pos, IBlockState state, Random rand)
+    @SuppressWarnings("deprecation")
+	public void updateTick(World worldIn, BlockPos pos, IBlockState state, Random rand)
     {
     	if ((worldIn.getLightFor(EnumSkyBlock.BLOCK, pos) > 11 - this.getDefaultState().getLightOpacity()) && SpectrumCraft.allowIcedThaw)
         {

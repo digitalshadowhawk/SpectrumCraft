@@ -3,6 +3,7 @@ package com.shadowhawk.spectrum;
 import org.apache.logging.log4j.Logger;
 
 import com.shadowhawk.spectrum.proxy.CommonProxy;
+import com.shadowhawk.spectrum.recipe.ModRecipes;
 import com.shadowhawk.spectrum.registry.ModBlocks;
 import com.shadowhawk.spectrum.registry.ModItems;
 import com.shadowhawk.spectrum.world.ModWorldGen;
@@ -62,6 +63,7 @@ public class SpectrumCraft {
 
 	        ModItems.preInit();
 	        ModBlocks.preInit();
+	        ModRecipes.init();
 
 	        proxy.preInit(event);
 	        GameRegistry.registerWorldGenerator(new ModWorldGen(allowSpectriumGen), 0);
