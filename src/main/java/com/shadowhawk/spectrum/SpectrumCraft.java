@@ -63,7 +63,9 @@ public class SpectrumCraft {
 
 	        ModItems.preInit();
 	        ModBlocks.preInit();
+	        //ModPotions.potionRegisters();
 	        ModRecipes.init();
+	        
 
 	        proxy.preInit(event);
 	        GameRegistry.registerWorldGenerator(new ModWorldGen(allowSpectriumGen), 0);

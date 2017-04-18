@@ -1,6 +1,6 @@
 {
   "parent": "item/generated",
   "textures": {
-    "layer0": "spectrum:block/spectrium_torch"
+    "layer0": "spectrum:blocks/spectrium_torch"
   }
 }

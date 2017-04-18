@@ -4,6 +4,7 @@ import com.shadowhawk.spectrum.registry.ModBlocks;
 import com.shadowhawk.spectrum.registry.ModItems;
 
 import net.minecraft.init.Blocks;
+import net.minecraft.init.Items;
 import net.minecraft.item.ItemStack;
 import net.minecraftforge.fml.common.registry.GameRegistry;
 import net.minecraftforge.oredict.OreDictionary;
@@ -17,7 +18,17 @@ public class ModRecipes {
 		addShapedRecipes();
         addShapelessRecipes();
         addSmelting();
+        addBrewing();
     }
+
+	private static void addBrewing() {
+
+		//IBrewingRecipe recipe = new BrewingRecipe(new ItemStack(Items.POTIONITEM), new ItemStack(ModItems.spectriumDust), new ItemStack(PotionType.getPotionTypeForName("rainbow")));
+		//Predicate<ItemStack> predicate = new PotionHelper.ItemPredicateInstance(ModItems.spectriumDust);
+		//System.out.println(predicate.toString());
+		//PotionHelper.registerPotionTypeConversion(PotionTypes.AWKWARD, predicate, PotionType.getPotionTypeForName("rainnbow"));
+		//BrewingRecipeRegistry.addRecipe(recipe);
+	}
 
 	private static void addSmelting() {
 		GameRegistry.addSmelting(ModBlocks.spectriumOre, new ItemStack(ModItems.spectriumDust, 2),  5.0F);
@@ -60,5 +71,19 @@ public class ModRecipes {
 		GameRegistry.addRecipe(frozenFromNormal);
 		GameRegistry.addRecipe(frozenFromIced);
 		
+		//Armor Recipes
+		GameRegistry.addShapedRecipe(new ItemStack(ModItems.spectriumHelmet), "AAA", "A A", 'A', ModItems.spectriumDust);
+		GameRegistry.addShapedRecipe(new ItemStack(ModItems.spectriumChestplate), "A A", "AAA", "AAA", 'A', ModItems.spectriumDust);
+		GameRegistry.addShapedRecipe(new ItemStack(ModItems.spectriumLeggings), "AAA", "A A", "A A", 'A', ModItems.spectriumDust);
+		GameRegistry.addShapedRecipe(new ItemStack(ModItems.spectriumBoots), "A A", "A A", 'A', ModItems.spectriumDust);
+		
+		//Tools
+		GameRegistry.addShapedRecipe(new ItemStack(ModItems.spectriumPickaxe), "AAA", " B ", " B ", 'A', ModItems.spectriumDust, 'B', Items.STICK);
+		GameRegistry.addShapedRecipe(new ItemStack(ModItems.spectriumSword), "A", "A", "B",  'A', ModItems.spectriumDust, 'B', Items.STICK);
+		GameRegistry.addShapedRecipe(new ItemStack(ModItems.spectriumSpade), "A", "B", "B",  'A', ModItems.spectriumDust, 'B', Items.STICK);
+		GameRegistry.addShapedRecipe(new ItemStack(ModItems.spectriumHoe), "AA", " B", " B", 'A', ModItems.spectriumDust, 'B', Items.STICK);
+		GameRegistry.addShapedRecipe(new ItemStack(ModItems.spectriumHoe), "AA", "B ", "B ", 'A', ModItems.spectriumDust, 'B', Items.STICK);
+		GameRegistry.addShapedRecipe(new ItemStack(ModItems.spectriumAxe), "AA", "AB", " B", 'A', ModItems.spectriumDust, 'B', Items.STICK);
+		GameRegistry.addShapedRecipe(new ItemStack(ModItems.spectriumAxe), "AA", "BA", "B ", 'A', ModItems.spectriumDust, 'B', Items.STICK);
 	}
 }

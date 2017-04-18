@@ -14,12 +14,13 @@ import net.minecraft.item.ItemStack;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.EnumSkyBlock;
 import net.minecraft.world.World;
+import net.minecraft.world.chunk.Chunk;
 
 public class FrozenSpectriumBlock extends BaseBlock {
 
     public FrozenSpectriumBlock(Material material, String name) {
         super(material, name);
-        this.slipperiness = 0.98F;
+        this.slipperiness = 1.0F;
         this.setTickRandomly(true);
     }
 

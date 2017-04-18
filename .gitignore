@@ -21,3 +21,4 @@ build
 eclipse
 run
 /src/main/resources/assets/spectrum/textures/blocks/*.pdn
+/src/main/java/com/shadowhawk/spectrum/potion

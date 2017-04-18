@@ -3,7 +3,7 @@ itemGroup.modtab=SpectrumCraft
 #Items
 item.spectrium_dust.name=Spectrium Dust
 item.spectrium_helmet.name=Spectrium Helmet
-item.spectrium_Chestplate.name=Spectrium Chestplate
+item.spectrium_chestplate.name=Spectrium Chestplate
 item.spectrium_leggings.name=Spectrium Leggings
 item.spectrium_boots.name=Spectrium Boots
 item.spectrium_sword.name=Spectrium Sword

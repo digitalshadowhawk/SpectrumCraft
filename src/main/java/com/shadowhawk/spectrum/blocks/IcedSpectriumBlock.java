@@ -19,7 +19,7 @@ public class IcedSpectriumBlock extends BaseBlock {
 
     public IcedSpectriumBlock(Material material, String name) {
         super(material, name);
-        this.slipperiness = 0.98F;
+        this.slipperiness = 0.99F;
         this.setTickRandomly(true);
     }
 
