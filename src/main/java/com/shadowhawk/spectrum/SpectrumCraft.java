@@ -29,7 +29,7 @@ public class SpectrumCraft {
 	    public static final String
 	            MODID = "spectrum",
 	            MODNAME = "Spectrum Craft",
-	            VERSION = "1.0";
+	            VERSION = "1.0.1";
 
 	    /** Custom Creative Tab */
 	    public static final CreativeTabs modtab = new CreativeTabs("modtab") {

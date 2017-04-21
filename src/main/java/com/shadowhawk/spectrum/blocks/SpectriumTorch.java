@@ -9,6 +9,7 @@ import com.shadowhawk.spectrum.SpectrumCraft;
 //import com.shadowhawk.spectrum.particles.ParticleTextureHandler;
 
 import net.minecraft.block.Block;
+import net.minecraft.block.SoundType;
 import net.minecraft.block.material.Material;
 import net.minecraft.block.properties.IProperty;
 import net.minecraft.block.properties.PropertyDirection;
@@ -51,6 +52,8 @@ public class SpectriumTorch extends BaseBlock{
         this.setDefaultState(this.blockState.getBaseState().withProperty(FACING, EnumFacing.UP));
         this.setTickRandomly(true);
         this.setCreativeTab(SpectrumCraft.modtab);
+        this.setLightLevel(1.0f);
+        this.setSoundType(SoundType.WOOD);
         //textureAtlas = ParticleTextureHandler.makeAtlasSprite(new ResourceLocation(SpectrumCraft.MODID, "rainbow_flame"));
     }
 
