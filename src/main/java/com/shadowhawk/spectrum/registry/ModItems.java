@@ -1,7 +1,6 @@
 package com.shadowhawk.spectrum.registry;
 
 import com.shadowhawk.spectrum.SpectrumCraft;
-import com.shadowhawk.spectrum.armor.SpectriumArmor;
 import com.shadowhawk.spectrum.items.ItemSpectriumDust;
 import com.shadowhawk.spectrum.tools.SpectriumAxe;
 import com.shadowhawk.spectrum.tools.SpectriumHoe;
@@ -11,9 +10,7 @@ import com.shadowhawk.spectrum.tools.SpectriumSword;
 
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.renderer.block.model.ModelResourceLocation;
-import net.minecraft.inventory.EntityEquipmentSlot;
 import net.minecraft.item.Item;
-import net.minecraft.item.ItemArmor;
 import net.minecraft.item.ItemAxe;
 import net.minecraft.item.ItemHoe;
 import net.minecraft.item.ItemPickaxe;
@@ -29,10 +26,10 @@ public class ModItems {
 	public static ItemSpade spectriumSpade;
 	public static ItemHoe spectriumHoe;
 	public static ItemAxe spectriumAxe;
-	public static ItemArmor spectriumHelmet;
-	public static ItemArmor spectriumChestplate;
-	public static ItemArmor spectriumLeggings;
-	public static ItemArmor spectriumBoots;
+	//public static ItemArmor spectriumHelmet;
+	//public static ItemArmor spectriumChestplate;
+	//public static ItemArmor spectriumLeggings;
+	//public static ItemArmor spectriumBoots;
 
     public static void preInit(){
     	spectriumDust = new ItemSpectriumDust("spectrium_dust");
@@ -41,10 +38,10 @@ public class ModItems {
     	spectriumSpade = new SpectriumSpade("spectrium_shovel");
     	spectriumHoe = new SpectriumHoe("spectrium_hoe");
     	spectriumAxe = new SpectriumAxe("spectrium_axe");
-    	spectriumHelmet = new SpectriumArmor("spectrium_helmet", 0, EntityEquipmentSlot.HEAD);
-    	spectriumChestplate = new SpectriumArmor("spectrium_chestplate", 0, EntityEquipmentSlot.CHEST);
-    	spectriumLeggings = new SpectriumArmor("spectrium_leggings", 1, EntityEquipmentSlot.LEGS);
-    	spectriumBoots = new SpectriumArmor("spectrium_boots", 0, EntityEquipmentSlot.FEET);
+    	//spectriumHelmet = new SpectriumArmor("spectrium_helmet", 0, EntityEquipmentSlot.HEAD);
+    	//spectriumChestplate = new SpectriumArmor("spectrium_chestplate", 0, EntityEquipmentSlot.CHEST);
+    	//spectriumLeggings = new SpectriumArmor("spectrium_leggings", 1, EntityEquipmentSlot.LEGS);
+    	//spectriumBoots = new SpectriumArmor("spectrium_boots", 0, EntityEquipmentSlot.FEET);
 
         registerItems();
     }
@@ -56,10 +53,10 @@ public class ModItems {
         GameRegistry.register(spectriumSpade, new ResourceLocation(SpectrumCraft.MODID, "spectrium_shovel"));
         GameRegistry.register(spectriumHoe, new ResourceLocation(SpectrumCraft.MODID, "spectrium_hoe"));
         GameRegistry.register(spectriumAxe, new ResourceLocation(SpectrumCraft.MODID, "spectrium_axe"));
-        GameRegistry.register(spectriumHelmet, new ResourceLocation(SpectrumCraft.MODID, "spectrium_helmet"));
-        GameRegistry.register(spectriumChestplate, new ResourceLocation(SpectrumCraft.MODID, "spectrium_chestplate"));
-        GameRegistry.register(spectriumLeggings, new ResourceLocation(SpectrumCraft.MODID, "spectrium_leggings"));
-        GameRegistry.register(spectriumBoots, new ResourceLocation(SpectrumCraft.MODID, "spectrium_boots"));
+        //GameRegistry.register(spectriumHelmet, new ResourceLocation(SpectrumCraft.MODID, "spectrium_helmet"));
+        //GameRegistry.register(spectriumChestplate, new ResourceLocation(SpectrumCraft.MODID, "spectrium_chestplate"));
+        //GameRegistry.register(spectriumLeggings, new ResourceLocation(SpectrumCraft.MODID, "spectrium_leggings"));
+        //GameRegistry.register(spectriumBoots, new ResourceLocation(SpectrumCraft.MODID, "spectrium_boots"));
     }
 
     public static void registerRenders() {
@@ -69,10 +66,10 @@ public class ModItems {
         registerRender(spectriumSpade);
         registerRender(spectriumHoe);
         registerRender(spectriumAxe);
-        registerRender(spectriumHelmet);
-        registerRender(spectriumChestplate);
-        registerRender(spectriumLeggings);
-        registerRender(spectriumBoots);
+        //registerRender(spectriumHelmet);
+        //registerRender(spectriumChestplate);
+        //registerRender(spectriumLeggings);
+        //registerRender(spectriumBoots);
     }
 
     private static void registerRender(Item item) {

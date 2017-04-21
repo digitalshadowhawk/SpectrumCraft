@@ -52,7 +52,6 @@ public class SpectriumTorch extends BaseBlock{
         this.setTickRandomly(true);
         this.setCreativeTab(SpectrumCraft.modtab);
         //textureAtlas = ParticleTextureHandler.makeAtlasSprite(new ResourceLocation(SpectrumCraft.MODID, "rainbow_flame"));
-    	System.out.println(new ResourceLocation(SpectrumCraft.MODID, "rainbow_flame").toString());
     }
 
     public AxisAlignedBB getBoundingBox(IBlockState state, IBlockAccess source, BlockPos pos)

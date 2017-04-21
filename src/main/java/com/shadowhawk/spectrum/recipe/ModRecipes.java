@@ -1,11 +1,16 @@
 package com.shadowhawk.spectrum.recipe;
 
+import java.util.List;
+
 import com.shadowhawk.spectrum.registry.ModBlocks;
 import com.shadowhawk.spectrum.registry.ModItems;
 
 import net.minecraft.init.Blocks;
 import net.minecraft.init.Items;
+import net.minecraft.item.EnumDyeColor;
 import net.minecraft.item.ItemStack;
+import net.minecraft.item.crafting.CraftingManager;
+import net.minecraft.item.crafting.IRecipe;
 import net.minecraftforge.fml.common.registry.GameRegistry;
 import net.minecraftforge.oredict.OreDictionary;
 import net.minecraftforge.oredict.ShapedOreRecipe;
@@ -15,11 +20,23 @@ public class ModRecipes {
 	public static void init() {
 		OreDictionary.registerOre("blockIce", Blocks.ICE);
 		OreDictionary.registerOre("blockIce", Blocks.PACKED_ICE);
+		removeRecipe(new ItemStack(Items.DYE, 2, EnumDyeColor.RED.getDyeDamage()));
 		addShapedRecipes();
         addShapelessRecipes();
         addSmelting();
         addBrewing();
     }
+	
+	public static void removeRecipe(ItemStack resultItem) {
+	    List<IRecipe> recipes = CraftingManager.getInstance().getRecipeList();
+	    for(int i = 0; i < recipes.size(); i++) {
+	      IRecipe tmpRecipe = recipes.get(i);
+	      ItemStack recipeResult = tmpRecipe.getRecipeOutput();
+	      if(ItemStack.areItemStacksEqual(resultItem, recipeResult)) {
+	        recipes.remove(i--);
+	      }
+	    }
+	  }
 
 	private static void addBrewing() {
 
@@ -48,9 +65,21 @@ public class ModRecipes {
 		ShapelessOreRecipe frostedRecipe = new ShapelessOreRecipe(new ItemStack(ModBlocks.frostedSpectriumBlock), ModBlocks.spectriumBlock, "blockIce");
 		GameRegistry.addRecipe(frostedRecipe);
 		
+		
+		
+		GameRegistry.addShapelessRecipe(new ItemStack(ModBlocks.rose, 2), new ItemStack(Blocks.DOUBLE_PLANT, 1, 4));
+		GameRegistry.addShapelessRecipe(new ItemStack(ModBlocks.rainbowRose), ModBlocks.rose, ModItems.spectriumDust);
+		GameRegistry.addShapelessRecipe(new ItemStack(Items.DYE, 1, 1),ModBlocks.rose);
+		GameRegistry.addShapelessRecipe(new ItemStack(ModItems.spectriumDust), ModBlocks.rainbowRose);
+		
 	}
 
 	private static void addShapedRecipes() {
+		//Rainbow Torch
+		ShapedOreRecipe spectriumTorch = new ShapedOreRecipe(ModBlocks.spectriumTorch, "A", "B", 'A', ModItems.spectriumDust, 'B', Items.STICK);
+		
+		GameRegistry.addRecipe(spectriumTorch);
+		
 		//Iced Spectrium Block		
 		ShapedOreRecipe icedFromNormal = new ShapedOreRecipe(ModBlocks.icedSpectriumBlock, " B ", "BAB", " B ", 'A', ModBlocks.spectriumBlock, 'B', "blockIce");
 		ShapedOreRecipe icedFromFrosted1 = new ShapedOreRecipe(ModBlocks.icedSpectriumBlock, "AB", "BB", 'A', ModBlocks.frostedSpectriumBlock, 'B', "blockIce");
@@ -72,10 +101,10 @@ public class ModRecipes {
 		GameRegistry.addRecipe(frozenFromIced);
 		
 		//Armor Recipes
-		GameRegistry.addShapedRecipe(new ItemStack(ModItems.spectriumHelmet), "AAA", "A A", 'A', ModItems.spectriumDust);
-		GameRegistry.addShapedRecipe(new ItemStack(ModItems.spectriumChestplate), "A A", "AAA", "AAA", 'A', ModItems.spectriumDust);
-		GameRegistry.addShapedRecipe(new ItemStack(ModItems.spectriumLeggings), "AAA", "A A", "A A", 'A', ModItems.spectriumDust);
-		GameRegistry.addShapedRecipe(new ItemStack(ModItems.spectriumBoots), "A A", "A A", 'A', ModItems.spectriumDust);
+		//GameRegistry.addShapedRecipe(new ItemStack(ModItems.spectriumHelmet), "AAA", "A A", 'A', ModItems.spectriumDust);
+		//GameRegistry.addShapedRecipe(new ItemStack(ModItems.spectriumChestplate), "A A", "AAA", "AAA", 'A', ModItems.spectriumDust);
+		//GameRegistry.addShapedRecipe(new ItemStack(ModItems.spectriumLeggings), "AAA", "A A", "A A", 'A', ModItems.spectriumDust);
+		//GameRegistry.addShapedRecipe(new ItemStack(ModItems.spectriumBoots), "A A", "A A", 'A', ModItems.spectriumDust);
 		
 		//Tools
 		GameRegistry.addShapedRecipe(new ItemStack(ModItems.spectriumPickaxe), "AAA", " B ", " B ", 'A', ModItems.spectriumDust, 'B', Items.STICK);

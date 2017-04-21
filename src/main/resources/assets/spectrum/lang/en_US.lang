@@ -20,3 +20,5 @@ tile.iced_spectrium_block.name=Iced Spectrium Block
 tile.frozen_spectrium_block.name=Frozen Spectrium Block
 tile.spectrium_torch.name=Spectrium Torch
 tile.spectrium_dust.name=Spectrium Dust
+tile.rose.name=Rose
+tile.rainbow_rose.name=Rainbow Rose

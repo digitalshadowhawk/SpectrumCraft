@@ -1,9 +1,11 @@
 package com.shadowhawk.spectrum.registry;
 
 import com.shadowhawk.spectrum.SpectrumCraft;
+import com.shadowhawk.spectrum.blocks.Flower;
 import com.shadowhawk.spectrum.blocks.FrostedSpectriumBlock;
 import com.shadowhawk.spectrum.blocks.FrozenSpectriumBlock;
 import com.shadowhawk.spectrum.blocks.IcedSpectriumBlock;
+import com.shadowhawk.spectrum.blocks.RainbowFlower;
 import com.shadowhawk.spectrum.blocks.SpectriumBlock;
 import com.shadowhawk.spectrum.blocks.SpectriumOre;
 import com.shadowhawk.spectrum.blocks.SpectriumTorch;
@@ -25,6 +27,8 @@ public class ModBlocks {
     public static IcedSpectriumBlock icedSpectriumBlock;
     public static FrozenSpectriumBlock frozenSpectriumBlock;
     public static SpectriumTorch spectriumTorch;
+    public static Flower rose;
+	public static RainbowFlower rainbowRose;
 
     public static void preInit(){
     	spectriumBlock = new SpectriumBlock(Material.ROCK, "spectrium_block");
@@ -33,6 +37,9 @@ public class ModBlocks {
     	icedSpectriumBlock = new IcedSpectriumBlock(Material.PACKED_ICE, "iced_spectrium_block");
     	frozenSpectriumBlock = new FrozenSpectriumBlock(Material.PACKED_ICE, "frozen_spectrium_block");
     	spectriumTorch = new SpectriumTorch(Material.CIRCUITS, "spectrium_torch");
+    	rose = new Flower(Material.PLANTS, "rose");
+    	rainbowRose = new RainbowFlower(Material.PLANTS, "rainbow_rose");
+    	
 
         registerBlocks();
     }
@@ -44,6 +51,8 @@ public class ModBlocks {
         registerBlock(icedSpectriumBlock, "iced_spectrium_block");
         registerBlock(frozenSpectriumBlock, "frozen_spectrium_block");
         registerBlock(spectriumTorch, "spectrium_torch");
+        registerBlock(rose, "rose");
+        registerBlock(rainbowRose, "rainbow_rose");
     }
 
     public static void registerBlock(Block block, String name) {
@@ -58,6 +67,8 @@ public class ModBlocks {
         registerRender(icedSpectriumBlock);
         registerRender(frozenSpectriumBlock);
         registerRender(spectriumTorch);
+        registerRender(rose);
+        registerRender(rainbowRose);
     }
 
     private static void registerRender(Block block) {

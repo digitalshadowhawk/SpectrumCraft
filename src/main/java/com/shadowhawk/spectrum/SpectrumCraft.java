@@ -11,6 +11,7 @@ import com.shadowhawk.spectrum.world.ModWorldGen;
 import mcp.MethodsReturnNonnullByDefault;
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.item.ItemStack;
+import net.minecraft.potion.PotionHelper;
 import net.minecraftforge.common.config.Configuration;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.common.SidedProxy;
@@ -28,7 +29,7 @@ public class SpectrumCraft {
 	    public static final String
 	            MODID = "spectrum",
 	            MODNAME = "Spectrum Craft",
-	            VERSION = "";
+	            VERSION = "1.0";
 
 	    /** Custom Creative Tab */
 	    public static final CreativeTabs modtab = new CreativeTabs("modtab") {
@@ -75,5 +76,6 @@ public class SpectrumCraft {
 	    @Mod.EventHandler
 	    public void init(FMLInitializationEvent event) {
 	        proxy.init(event);
+	        PotionHelper.init();
 	    }
 	}
